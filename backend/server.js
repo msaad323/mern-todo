@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'https://mern-todo-kohl-pi.vercel.app/',
+  origin: 'https://mern-todo-kohl-pi.vercel.app',
   credentials: true, // Allow cookies to be sent
 }));
 
