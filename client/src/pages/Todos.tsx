@@ -17,7 +17,7 @@ const Todos = () => {
   useEffect(() => {
     const fetchTodos = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/todos", {
+        const res = await axios.get("https://mern-todo-npc5.onrender.com/api/v1/todos", {
           withCredentials: true,
         });
         setTodos(res.data);
@@ -33,7 +33,7 @@ const Todos = () => {
 
   const deleteTodo = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:3000/api/v1/todos/${id}`, {
+      await axios.delete(`https://mern-todo-npc5.onrender.com/api/v1/todos/${id}`, {
         withCredentials: true,
       });
       setTodos((prev) => prev.filter((todo) => todo._id !== id));

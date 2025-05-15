@@ -31,7 +31,7 @@ const TodoApp = () => {
     if (isLoggedIn) {
       try {
         await axios.post(
-          "http://localhost:3000/api/v1/auth/logout",
+          "https://mern-todo-npc5.onrender.com/api/v1/auth/logout",
           {},
           { withCredentials: true }
         );
@@ -60,12 +60,12 @@ const TodoApp = () => {
     try {
       if (editingTodo) {
         await axios.put(
-          `http://localhost:3000/api/v1/todos/${editingTodo._id}`,
+          `https://mern-todo-npc5.onrender.com/api/v1/todos/${editingTodo._id}`,
           formData,
           { withCredentials: true }
         );
       } else {
-        await axios.post("http://localhost:3000/api/v1/todos", formData, {
+        await axios.post("https://mern-todo-npc5.onrender.com/api/v1/todos", formData, {
           withCredentials: true,
         });
       }
